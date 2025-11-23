@@ -46,8 +46,57 @@
 }
 @media (max-width: 768px) {
   .links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #0A0A0A;
+    width: 100%;
     flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
+    gap: 1.2rem;
+
+    display: none;  
   }
+
+  .groupy{
+    height: 20vw;
+  }
+
+  .links.open {
+    display: flex; 
+    padding: 10px;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+
+.line {
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+.line1.active {
+  transform: translateY(8px) rotate(45deg);
+}
+.line2.active {
+  opacity: 0;
+}
+.line3.active {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 22px;
+}
+.menu-img{
+  width: 40px;
 }
